@@ -59,6 +59,25 @@
         </button>
 
         <dialog class="show" id="modal">
+          <h3 class="textform">Deje sus datos, nos contactaremos con usted</h3>
+          <form>
+            <label>Nombre <input type="text" name="text" required /></label>
+            <label
+              >Teléfono <input type="number" name="number" required
+            /></label>
+            <label>E-mail <input type="email" name="email" /></label>
+            <label
+              >Comentarios
+              <textarea
+                name="feedback"
+                rows="10"
+                placeholder="Introduzca el texto"
+              ></textarea>
+            </label>
+            <input type="checkbox" class="terminos" /> Estoy de acuerdo con el
+            boletín informativo y acepto los Términos y Condiciones
+            <button class="sendform" type="submint">Enviar</button>
+          </form>
           <button id="cerrarmodal" class="closemodal">X</button>
         </dialog>
       </section>
