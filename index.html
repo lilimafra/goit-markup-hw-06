@@ -61,21 +61,41 @@
         <dialog class="show" id="modal">
           <h3 class="textform">Deje sus datos, nos contactaremos con usted</h3>
           <form>
-            <label>Nombre <input type="text" name="text" required /></label>
-            <label
-              >Teléfono <input type="number" name="number" required
-            /></label>
-            <label>E-mail <input type="email" name="email" /></label>
-            <label
-              >Comentarios
+            <label class="dateforms">Nombre </label>
+            <div class="boxlabel">
+              <svg class="icon_data">
+                <use href="./images/icons.svg#icon-Vector-3"></use>
+              </svg>
+              <input class="modal_input" type="text" name="text" required />
+            </div>
+
+            <label>Teléfono </label>
+            <div class="boxlabel">
+              <svg class="icon_data">
+                <use href="./images/icons.svg#icon-Vector-2"></use>
+              </svg>
+              <input class="modal_input" type="number" name="number" required />
+            </div>
+            <label>E-mail </label>
+            <div class="boxlabel">
+              <svg class="icon_data">
+                <use href="./images/icons.svg#icon-Vector-1"></use>
+              </svg>
+              <input class="modal_input" type="email" name="email" />
+            </div>
+            <label>Comentarios</label>
+            <div class="boxlabel">
               <textarea
+                class="textcoment"
                 name="feedback"
-                rows="10"
+                rows="7"
                 placeholder="Introduzca el texto"
               ></textarea>
-            </label>
-            <input type="checkbox" class="terminos" /> Estoy de acuerdo con el
-            boletín informativo y acepto los Términos y Condiciones
+            </div>
+            <div class="boxlabel prueba">
+              <input class="check" type="checkbox" />Estoy de acuerdo con el
+              boletín informativo y acepto los Términos y Condiciones
+            </div>
             <button class="sendform" type="submint">Enviar</button>
           </form>
           <button id="cerrarmodal" class="closemodal">X</button>
