@@ -596,6 +596,7 @@ footer .mt {
   letter-spacing: 0.06em;
   margin-left: 12px;
   cursor: pointer;
+  border: none;
 }
 
 .input_subcribe {
@@ -604,7 +605,17 @@ footer .mt {
   height: 50px;
   top: 2787px;
   border-radius: 4px;
-  border-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input_subcribe:hover,
+.input_subcribe:focus {
+  border-color: var(--brandcolor);
+  color: #ffffff;
+  font-size: medium;
+  font-family: "roboto", sans-serif;
 }
 .socialf:hover {
   background-color: var(--brandcolor);
@@ -630,7 +641,14 @@ footer .mt {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   color: #000000;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.closemodal:hover,
+.closemodal:focus {
+  color: var(--brandcolor);
 }
 
 .box_animate {
@@ -684,6 +702,7 @@ footer .mt {
 .sendform {
   display: flex;
   margin: auto;
+  margin-top: 20px;
   width: 200px;
   height: 50px;
   left: 700px;
@@ -698,6 +717,7 @@ footer .mt {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   justify-content: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textform {
@@ -730,6 +750,7 @@ label {
   padding-top: 4px;
   padding-bottom: 10px;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .boxlabel:hover,
 .boxlabel:focus {
@@ -746,11 +767,16 @@ label {
   width: 100%;
   padding-left: 40px;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal_input:hover,
 .modal_input:focus {
   border-color: var(--brandcolor);
+}
+
+.modal_input:focus + .icon_data {
+  fill: var(--brandcolor);
 }
 
 .icon_data {
@@ -761,29 +787,49 @@ label {
   left: 50px;
 }
 .coment {
-  margin: 9px;
+  display: flex;
+  position: relative;
+  padding: 15px;
+  margin: auto;
+  width: 448px;
+  height: 48px;
+  margin: none;
   font-family: "Roboto", sans-serif;
-  justify-items: left;
+  justify-items: baseline;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #757575;
-  position: relative;
-
-  flex-direction: column;
-  padding-left: 41px;
-  padding-right: 39px;
-  padding-top: 4px;
-  padding-bottom: 10px;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textcoment:hover,
 .coment:focus {
-  color: var(--brandcolor);
+  color: var(--basecolor);
 }
 .check {
-  margin: 8px;
-  resize: none;
+  position: absolute;
+  display: flex;
+  border-color: rgba(33, 33, 33, 1);
+  width: 16px;
+  height: 16px;
+  align-items: end;
+  justify-items: baseline;
+  margin: 0.1px;
+}
+.label_check {
+  position: absolute;
+  padding: 0.1px;
+  display: inline-block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-left: 20px;
+  align-items: left;
 }
 
 .sendbotton {
@@ -791,6 +837,7 @@ label {
   height: 24px;
   fill: #f5f4fa;
   margin-left: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textcoment {
@@ -798,17 +845,20 @@ label {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+  padding: 10px;
   line-height: 14.06px;
   letter-spacing: 0.01em;
-  padding-top: 12px;
-  padding-left: 12px;
-  color: rgba(117, 117, 117, 0.5);
+  border-color: rgba(117, 117, 117, 0.5);
   cursor: pointer;
+  align-items: left;
 }
 ::placeholder {
   color: rgba(117, 117, 117, 0.5);
+  padding-left: 10px;
 }
 .textcoment:hover,
-.textcoment:focus {
+.textcoment:focus .textcoment:focus-visible {
   border-color: var(--brandcolor);
+  outline: none;
+  padding: 12px;
 }
